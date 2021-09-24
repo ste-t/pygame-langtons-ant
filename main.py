@@ -87,7 +87,6 @@ class Ant:
             self.move()
 
 
-# TODO: fix this function instead of using the other slooooow one
 """
 def display(surface):
     display_surf = pygame.Surface(grid.shape)
