@@ -52,8 +52,7 @@ class Ant:
 
     def switch_color(self):
         # print("Switching color")
-        grid[self.position[1], self.position[0]] = 1 \
-            if not grid[self.position[1], self.position[0]] else 0
+        grid[self.position[1], self.position[0]] = not grid[self.position[1], self.position[0]]
 
     def move(self):
         if self.direction == self.ANT_UP:
