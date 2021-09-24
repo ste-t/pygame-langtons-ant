@@ -135,6 +135,7 @@ def main():
             if event.type == pygame.QUIT or \
                     event.type == pygame.KEYDOWN and \
                     event.key == pygame.K_ESCAPE:
+                print(steps)
                 sys.exit()
 
         ant.step()
