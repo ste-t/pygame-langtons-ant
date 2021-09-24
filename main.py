@@ -103,9 +103,10 @@ def display(surface):
     x, y = 0, 0
     for row in grid:
         for col in row:
-            pygame.draw.rect(surface, color_b if col else color_a, (x, y, square_size, square_size))
-            x = x + square_size
-        y = y + square_size
+            if col:
+                pygame.draw.rect(surface, color_b, (x, y, square_size, square_size))
+            x += square_size
+        y += square_size
         x = 0
 
 
@@ -143,12 +144,14 @@ def main():
         # ant2.step()
         # ant3.step()
 
+        screen.fill(color_a)
         display(screen)
         draw_grid()
         pygame.display.flip()
         pygame.display.set_caption(f"Langton's ant ({round(clock.get_fps())}/{fps} fps)")
         steps += 1
-        """
+
+        """ Performance testing
         if steps >= 100:
             print(f"\n{steps} steps in {pygame.time.get_ticks()} ms")
             sys.exit()
