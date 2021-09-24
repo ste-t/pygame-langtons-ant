@@ -17,4 +17,5 @@ python main.py
 ```
 
 # TODO
-Fix ***very slow*** loops
+
+- [x] <s>Fix ***very slow*** loops</s>
