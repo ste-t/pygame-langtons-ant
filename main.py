@@ -146,7 +146,7 @@ def main():
         display(screen)
         draw_grid()
         pygame.display.flip()
-        pygame.display.set_caption(f"LANGTON'S ANTS ({clock.get_fps()}/{fps})")
+        pygame.display.set_caption(f"Langton's ant ({round(clock.get_fps())}/{fps} fps)")
         steps += 1
         """
         if steps >= 100:
