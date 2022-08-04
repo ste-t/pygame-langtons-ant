@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pygame-langtons-ant"
+version = "2.0.0"
+description = "Langton's ant with Pygame"
+authors = ["IlmastroStefanuzzo <ilmastrostefanuzzo@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pygame = "^2.1.2"
+numpy = "^1.23.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

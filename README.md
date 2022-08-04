@@ -1,24 +1,46 @@
 # Pygame Langton's ant
 
-[![unknown (1)](https://user-images.githubusercontent.com/71498817/134722027-6acf5a73-a9cb-4831-9d0c-44566bfaf86e.png)
+Yet another Langton's ant simulation
+
+[![Langton's ant image](https://user-images.githubusercontent.com/71498817/134722027-6acf5a73-a9cb-4831-9d0c-44566bfaf86e.png)
 ](http://www.youtube.com/watch?v=ydkZyKvD7Y8 "Langton's ant with Python and Pygame")
 
-**Yet another Langont's ant simulation**
+###### (Click above to watch the video)
 
-# Installation
+## Installation
 
-```bash
+### Clone the repo
+
+```sh
 git clone https://github.com/IlmastroStefanuzzo/pygame-langtons-ant
-pip install -r pygame-langtons-ant/requirements.txt
+cd pygame-lantons-ant
 ```
 
-# Start
+### Install requirements
 
-```bash
-cd pygame-langtons-ant  # If you aren't in the directory yet
+#### Pip (use this if you aren't sure)
+
+```sh
+pip install -r requirements.txt
+```
+
+#### Virtual enviorment with Poetry
+
+```sh
+poetry install
+```
+
+## Start
+
+### If you used Pip
+
+```sh
 python main.py
 ```
 
-# TODO
+### If you used Poetry
 
-- [x] <s>Fix ***very slow*** loops</s>
+```sh
+poetry run python main.py
+# or just 'python main.py' if you're in a Poetry shell
+```
