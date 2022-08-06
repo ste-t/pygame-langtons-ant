@@ -7,6 +7,7 @@ color0 = 0x282d3f
 color1 = 0xd3423e
 
 pygame.display.init()
+pygame.event.set_allowed([pygame.QUIT, pygame.KEYDOWN, pygame.K_ESCAPE])
 
 max_fps = 0  # 0 means no limit
 clock = pygame.time.Clock()
