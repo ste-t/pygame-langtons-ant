@@ -1,2 +1,2 @@
-numpy
-pygame
+numpy==1.23.1; python_version >= "3.8"
+pygame==2.1.2; python_version >= "3.6"
