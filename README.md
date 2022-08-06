@@ -25,7 +25,7 @@ cd pygame-lantons-ant
 pip install -r requirements.txt
 ```
 
-#### Virtual enviorment with Poetry
+#### Virtual environment with Poetry
 
 ```sh
 poetry install
