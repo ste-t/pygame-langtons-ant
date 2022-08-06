@@ -28,7 +28,7 @@ pip install -r requirements.txt
 #### Virtual environment with Poetry
 
 ```sh
-poetry install
+poetry install --no-dev
 ```
 
 ## Start
