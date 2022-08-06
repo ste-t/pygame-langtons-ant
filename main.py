@@ -90,7 +90,7 @@ def draw_cells():
     # TODO: figure out why this displays the wrong color
     #display_surf = pygame.surfarray.make_surface(np.transpose(grid * color1))
 
-    screen.blit(pygame.transform.scale(display_surf, window_size), (0, 0))
+    pygame.transform.scale(display_surf, window_size, screen)
 
 
 grid_lines = pygame.Surface(window_size, pygame.SRCALPHA)
@@ -116,13 +116,15 @@ def main():
             if event.type == pygame.QUIT or \
                     event.type == pygame.KEYDOWN and \
                     event.key == pygame.K_ESCAPE:
-                print(steps)
+                print(f"\n{steps} steps")
                 sys.exit(0)
 
         ant.step()
         # ant1.step()
         # ant2.step()
         # ant3.step()
+
+        steps += 1
 
         draw_cells()
         screen.blit(grid_lines, (0, 0))
@@ -132,8 +134,7 @@ def main():
             f"Langton's ant ({int(clock.get_fps())}/{max_fps} fps)")
 
         """ Performance testing
-        steps += 1
-        if steps >= 11000:
+        if steps == 11000:
             print(f"\n{steps} steps in {pygame.time.get_ticks()} ms")
             sys.exit()
         """
