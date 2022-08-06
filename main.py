@@ -1,5 +1,6 @@
 #!/bin/env python
 import sys
+from contextlib import suppress
 import numpy as np
 import pygame
 import pygame.gfxdraw
@@ -96,10 +97,11 @@ def draw_cells():
 
 
 grid_lines = pygame.Surface(window_size, pygame.SRCALPHA)
-for x in range(0, window_size[0], square_size):
-    pygame.gfxdraw.vline(grid_lines, x, 0, window_size[1], (0, 0, 0))
-for y in range(0, window_size[1], square_size):
-    pygame.gfxdraw.hline(grid_lines, 0, window_size[0], y, (0, 0, 0))
+if square_size > 1:
+    for x in range(0, window_size[0], square_size):
+        pygame.gfxdraw.vline(grid_lines, x, 0, window_size[1], (0, 0, 0))
+    for y in range(0, window_size[1], square_size):
+        pygame.gfxdraw.hline(grid_lines, 0, window_size[0], y, (0, 0, 0))
 
 
 ant = Ant([cols / 2, rows / 2], 1)
@@ -132,8 +134,9 @@ def main():
         screen.blit(grid_lines, (0, 0))
         pygame.display.flip()
 
-        pygame.display.set_caption(
-            f"Langton's ant ({int(clock.get_fps())}/{max_fps} fps)")
+        with suppress(OverflowError):
+            pygame.display.set_caption(
+                f"Langton's ant ({int(clock.get_fps())}/{max_fps} fps)")
 
         """ Performance testing
         if steps == 11000:
