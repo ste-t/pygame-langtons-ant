@@ -14,9 +14,14 @@ pygame.event.set_allowed([pygame.QUIT, pygame.KEYDOWN, pygame.K_ESCAPE])
 max_fps = 0  # 0 means no limit
 clock = pygame.time.Clock()
 
+square_size = 10
 window_size = 1080, 720
+
+# Ensure the window_size is a multiple of square_size
+window_size = (window_size[0] - window_size[0] %
+               square_size, window_size[1] - window_size[1] % square_size)
+
 screen = pygame.display.set_mode(window_size)
-square_size = 10  # Should be a divisor of the vertical and horizontal window size
 
 cols, rows = int(window_size[0] /
                  square_size), int(window_size[1] / square_size)
