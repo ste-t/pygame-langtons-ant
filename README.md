@@ -13,7 +13,7 @@ Yet another Langton's ant simulation
 ### Clone the repo
 
 ```sh
-git clone https://github.com/IlmastroStefanuzzo/pygame-langtons-ant
+git clone https://github.com/ste-t/pygame-langtons-ant
 cd pygame-lantons-ant
 ```
 
